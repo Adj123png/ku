@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双11提前购活动</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff6e5;
+            color: #333;
+            text-align: center;
+            padding: 10px;
+            overflow-x: hidden;
+        }
+        #loading {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #ff8c00;
+        }
+
+        .header {
+            background-color: #ff4b4b;
+            color: white;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+        .header h1, .header p {
+            margin: 0;
+        }
+
+        .section {
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            text-align: left;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section h2 {
+            font-size: 22px;
+            color: #ff8c00;
+            margin-bottom: 15px;
+        }
+
+        .product-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .product-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+        .product-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .product-item img {
+            width: 100px;
+            margin-right: 15px;
+            border-radius: 8px;
+        }
+
+        .buy-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff8c00;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .buy-button:hover {
+            background-color: #ff6f00;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">加载中...</div>
+
+    <div class="header">
+        <h1>🔥 双11提前购活动来袭！ 🔥</h1>
+        <p>提前开启双11狂欢，享受超值秒杀价优惠！机会不容错过，手慢无！</p >
+    </div>
+
+    <div class="section">
+        <h2>🍏 苹果手机系列</h2>
+        <ul class="product-list">
+            <li class="product-item">苹果13 128G：秒杀价4190元</li>
+            <li class="product-item">苹果14 256G：秒杀价5650元</li>
+            <li class="product-item">苹果14 Plus 128G：秒杀价5068元</li>
+            <li class="product-item">苹果15 256G：秒杀价6161元</li>
+            <li class="product-item">苹果15 Pro 256G：秒杀价7570元</li>
+            <li class="product-item">苹果15 Pro 512G：秒杀价9210元</li>
+            <li class="product-item">苹果15 Pro Max 256G：秒杀价8486元</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📱 荣耀手机系列</h2>
+        <ul class="product-list">
+            <li class="product-item">荣耀 Magic V3 16+512G：秒杀价9563元</li>
+            <li class="product-item">荣耀 Magic V3 16+1T：秒杀价10489元</li>
+            <li class="product-item">荣耀 Magic VS3 16+512G：秒杀价7197元</li>
+            <li class="product-item">荣耀 Magic VS3 16+256G：秒杀价6627元</li>
+            <li class="product-item">荣耀 Magic V2 至臻版 16+1T：秒杀价9359元</li>
+            <li class="product-item">荣耀 Magic 6 16+256G：秒杀价3993元</li>
+            <li class="product-item">荣耀 Magic 6 16+512G：秒杀价4291元</li>
+            <li class="product-item">荣耀 200 Pro 16+1T：秒杀价3797元</li>
+            <li class="product-item">荣耀 200 Pro 16+512G：秒杀价3391元</li>
+            <li class="product-item">荣耀 200 Pro 12+512G：秒杀价3195元</li>
+            <li class="product-item">荣耀 200 12+512G：秒杀价2594元</li>
+            <li class="product-item">荣耀 200 16+512G：秒杀价2780元</li>
+            <li class="product-item">荣耀 畅玩50m 6+128G：秒杀价999元</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📲 VIVO手机系列</h2>
+        <ul class="product-list">
+            <li class="product-item">Y300 12+256G：秒杀价2050元</li>
+            <li class="product-item">Y300 12+512G：秒杀价2277元</li>
+            <li class="product-item">Y200i 12+256G：秒杀价1388元</li>
+            <li class="product-item">Y200i 12+512G：秒杀价1666元</li>
+            <li class="product-item">Y36m 12+256G：秒杀价1888元</li>
+            <li class="product-item">S19 12+256G：秒杀价2560元</li>
+            <li class="product-item">S19 12+512G：秒杀价2766元</li>
+            <li class="product-item">S17e 12+256G：秒杀价1993元</li>
+            <li class="product-item">Y37 6+128G：秒杀价999元</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📱 OPPO手机系列</h2>
+        <ul class="product-list">
+            <li class="product-item">A2m 12+256G：秒杀价1666元</li>
+        </ul>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            document.getElementById("loading").style.display = "none";
+        });
+
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            const windowHeight = window.innerHeight;
+
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < windowHeight - 50) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
